@@ -38,10 +38,10 @@ const Education = ({ heading }: { heading: string }) => {
         id="education"
         className="bg-background2  h-auto  w-screen pt-[80px]"
       >
-        <div className="absolute">
+        <div className="container relative mx-auto h-auto min-h-[30rem] w-screen pb-8">
           <svg
             viewBox="0 0 200 200"
-            className="relative -right-[10rem] -top-[2rem] z-0 w-[20rem]"
+            className="absolute right-4  top-2 z-0 w-[20rem]"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -50,10 +50,8 @@ const Education = ({ heading }: { heading: string }) => {
               transform="translate(100 100)"
             />
           </svg>
-        </div>
-        <div className="absolute">
           <svg
-            className="relative -right-[58rem] top-[8rem] z-0 w-[38rem]"
+            className="absolute bottom-2 left-0 z-0 w-[30%]"
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -63,9 +61,7 @@ const Education = ({ heading }: { heading: string }) => {
               transform="translate(100 100)"
             />
           </svg>
-        </div>
 
-        <div className="container  mx-auto h-auto w-screen pb-8">
           <div className="text-center">
             <h2 className="text-text1 mb-2 py-4 font-extrabold leading-5 tracking-wider   md:text-3xl lg:text-6xl">
               Education

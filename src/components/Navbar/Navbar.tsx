@@ -151,15 +151,15 @@ const Navbar = () => {
               : "absolute left-[-100%] right-0 top-[100px] flex h-screen w-full items-center justify-center bg-slate-800  text-center text-white duration-300 ease-in md:hidden"
           }
         >
-          <div className="w-full">
-            <ul className="pb-2 font-bold  uppercase">
+          <div className="w-full pb-12">
+            <ul className="pb-10 font-bold  uppercase">
               {navTabs.map((nav, ind) => {
                 return (
                   <li
                     key={ind}
                     onClick={() => handleCloseNavbar(nav.link)}
                     className={
-                      "navLink my-10 tracking-widest transition-all duration-300 hover:text-[#685ba2] md:ml-2 md:mr-2 md:text-sm lg:mr-8 lg:text-lg"
+                      "navLink my-12 tracking-widest transition-all duration-300 hover:text-[#685ba2] md:ml-2 md:mr-2 md:text-sm lg:mr-8 lg:text-lg"
                     }
                   >
                     {nav.name}
@@ -173,7 +173,7 @@ const Navbar = () => {
                   href={bio?.githubLink}
                   target="_blank"
                   onClick={handleIconToggle}
-                  className="mr-4 transition-all duration-300 hover:scale-125"
+                  className="mr-8 transition-all duration-300 hover:scale-125"
                 >
                   <FontAwesomeIcon
                     className="text-2xl transition-all duration-300 hover:scale-105"
@@ -186,7 +186,7 @@ const Navbar = () => {
                   href={bio?.linkedinLink}
                   target="_blank"
                   onClick={handleIconToggle}
-                  className="mr-4 transition-all duration-300 hover:scale-105"
+                  className="mr-8 transition-all duration-300 hover:scale-105"
                 >
                   <FontAwesomeIcon
                     className="text-2xl transition-all duration-300 hover:scale-125"
@@ -199,7 +199,7 @@ const Navbar = () => {
                   href={bio?.whatsappLink}
                   target="_blank"
                   onClick={handleIconToggle}
-                  className="mr-4 transition-all duration-300 hover:scale-105"
+                  className="mr-8 transition-all duration-300 hover:scale-105"
                 >
                   <FontAwesomeIcon
                     className="text-2xl transition-all duration-300 hover:scale-125"

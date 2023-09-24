@@ -9,10 +9,10 @@ const Contact = ({ heading }: { heading: string }) => {
         id="education"
         className=" bg-background1  h-auto  w-screen pt-[80px]"
       >
-        <div className="absolute">
+        <div className="container relative mx-auto h-auto w-screen pb-8">
           <svg
             viewBox="0 0 200 200"
-            className="relative -top-[8rem] right-[7rem] z-0 w-[40rem]"
+            className="absolute bottom-[0rem] left-[6rem] z-0 w-[18rem]"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -21,11 +21,10 @@ const Contact = ({ heading }: { heading: string }) => {
               transform="translate(100 100)"
             />
           </svg>
-        </div>
-        <div className="absolute">
+          ={" "}
           <svg
             viewBox="0 0 200 200"
-            className="relative -right-[58rem] top-[24rem] z-0 w-[20rem]"
+            className="absolute right-[12rem] top-[2rem] z-0 w-[14rem]"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -34,8 +33,6 @@ const Contact = ({ heading }: { heading: string }) => {
               transform="translate(100 100)"
             />
           </svg>
-        </div>
-        <div className="container  mx-auto h-auto w-screen pb-8">
           <div className="text-center">
             <h2 className="text-text1 mb-2 py-4 font-extrabold leading-5 tracking-wider   md:text-3xl lg:text-6xl">
               Contanct

@@ -19,7 +19,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <svg
+      {/* <svg
         id="10015.io"
         viewBox="0 0 480 480"
         xmlns="http://www.w3.org/2000/svg"
@@ -40,14 +40,14 @@ const HeroSection = () => {
           fill="rgba(148, 234, 255, 0.1)"
           d="M220,319.71650733167064C284.806477206152,325.19502805321105,360.25671212877035,374.9607129688636,401.96445335665965,325.05722612841055C447.5898103386416,270.46629565100545,421.34457558059944,185.6541346143303,381.0528579662641,127.01608909941889C345.7775479006009,75.67860934782263,281.80853961748284,52.518167352055954,220,60.23754283380895C168.94770531148134,66.61355227109243,141.6866219331574,115.37875802284206,116.23272211034381,160.08993417733222C91.18213644089926,204.0926668209102,56.92013126904722,255.76897930096305,84.5167824854555,298.2212721026987C111.22787572240361,339.3112993765575,171.16528080580218,315.58818509337095,220,319.71650733167064"
         />
-      </svg>
+      </svg> */}
 
       <div className="bg-background2">
         <div
           id="about"
-          className="container  mx-auto box-border flex h-auto w-screen  flex-col items-center border-none p-0  md:flex-row md:items-start md:justify-between"
+          className="container relative  mx-auto box-border flex h-auto w-screen flex-col  items-center border-none p-0 md:flex-row  md:items-start md:justify-between"
         >
-          <div className="hero-left-section  z-20 order-2 mx-3 flex w-full flex-col items-end  justify-end pt-16 md:order-1 md:mt-20">
+          <div className="hero-left-section  z-20 order-2 mx-3 flex w-full flex-col items-end  justify-end pt-16 md:order-1 md:mt-16">
             <div className="h-auto">
               <div className="text-text1 mb-2   pb-4 text-center text-4xl font-extrabold leading-tight tracking-tight dark:text-white md:text-left md:text-5xl lg:text-6xl">
                 Hi, I am <br />{" "}
@@ -105,17 +105,15 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="hero-right-section z-20 order-1 h-full w-full md:order-2">
-            <div className="relative">
-              <HeroBgAnimation />
-              <Image
-                className="absolute -right-5 top-14 transition-all duration-500 hover:scale-105  md:right-0 md:top-24"
-                src={myPhotoImg}
-                alt="hero"
-                width={600}
-                height={400}
-              />
-            </div>
+          <div className="hero-right-section  z-20 order-1 h-full w-full md:order-2">
+            <HeroBgAnimation />
+            <Image
+              className="absolute  top-14  pl-6 transition-all duration-500 hover:scale-105 md:right-0  md:top-24 md:pl-0"
+              src={myPhotoImg}
+              alt="hero"
+              width={550}
+              height={550}
+            />
           </div>
         </div>
         <SkewedDark />

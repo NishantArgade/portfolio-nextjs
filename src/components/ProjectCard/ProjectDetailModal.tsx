@@ -24,7 +24,7 @@ const ProjectDetailModal = ({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <div className="bg-background-paper text-text border-1 absolute left-1/2 top-1/2 h-[93vh] w-[95vw] -translate-x-1/2  -translate-y-1/2 transform rounded-lg border-black  bg-black/70 p-1  shadow-md md:w-[89vw] md:border-2 md:px-3 md:pb-2">
+        <div className="bg-background-paper text-text border-1 absolute left-1/2 top-1/2 h-[90vh] w-[95vw] -translate-x-1/2  -translate-y-1/2 transform rounded-lg border-black  bg-black/70 p-1  shadow-md md:w-[89vw] md:border-2 md:px-3 md:pb-2">
           <Typography className="text-md flex items-center justify-between pb-1 pl-1 font-semibold">
             <div className="line-clamp-1 pr-2">
               {modalData?.project?.attributes?.name}
@@ -36,7 +36,7 @@ const ProjectDetailModal = ({
             />
           </Typography>
 
-          <div className="flex h-[85vh] flex-col bg-gray-700 md:flex-row">
+          <div className="flex h-[83vh] flex-col bg-gray-700 md:flex-row">
             {/* project image carousel*/}
 
             <div className="flex h-[40%] w-full items-center justify-center bg-[#053B50] py-2 md:h-full md:w-[40%] md:py-0">
