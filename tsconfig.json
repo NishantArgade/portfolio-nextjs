@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Footer/index.js", "src/components/Navbar/index.js", "src/components/ProjectCard/index.js", "src/pages/Contact/index.js", "src/pages/Education/index.js", "src/pages/Experience/index.js", "src/pages/HeroSection/index.js", "src/pages/Projects/index.js", "src/pages/Skills/index.js", "src/app/api/sendEmail/route.js"],
+  "exclude": ["node_modules"]
+}
