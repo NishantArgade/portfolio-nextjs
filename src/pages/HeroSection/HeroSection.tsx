@@ -74,7 +74,7 @@ const HeroSection = () => {
               </div>
               <div className="pb-2 pt-6 text-center md:text-left">
                 <a
-                  href={`${process.env.STRAPI_DOMAIN}${resumePDF?.data.attributes.url}`}
+                  href={`${resumePDF?.data.attributes.url}`}
                   download="Nishant-Argade-Resume"
                   target="_blank"
                   rel="noreferrer"

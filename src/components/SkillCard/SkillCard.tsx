@@ -16,11 +16,7 @@ const SkillCard = ({ skill }: { skill: ISkillCard }) => {
             <div key={index} className="">
               <button className="border-text inline-flex   items-center rounded-lg border border-solid border-opacity-30 bg-[#6c8d9552]  px-2 py-1  text-gray-300 shadow-md  hover:bg-gray-700">
                 <Image
-                  src={
-                    skill.logo
-                      ? `${process.env.STRAPI_DOMAIN}${skill.logo}`
-                      : "/"
-                  }
+                  src={skill.logo ? `${skill.logo}` : "/"}
                   width={25}
                   height={25}
                   alt=""
