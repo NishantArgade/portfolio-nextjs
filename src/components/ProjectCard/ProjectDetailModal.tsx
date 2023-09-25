@@ -71,7 +71,7 @@ const ProjectDetailModal = ({
               <h2 className="mb-4  text-2xl font-semibold  md:mt-5">
                 {modalData?.project?.attributes?.name}
               </h2>
-              <p className="mb-4 text-gray-400">
+              <p className="mb-4 text-center text-gray-400 md:text-start">
                 {modalData?.project?.attributes?.description}
               </p>
               <div className="mb-4">
@@ -129,7 +129,7 @@ const ProjectDetailModal = ({
                       <a
                         href={modalData?.project?.attributes?.githubLink}
                         target="_blank"
-                        className="text-sm"
+                        className="text-md mr-[0.16rem]"
                       >
                         <FontAwesomeIcon icon={faGithubAlt} />
                       </a>

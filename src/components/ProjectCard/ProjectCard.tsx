@@ -52,7 +52,7 @@ const ProjectCard = ({ project, handleOpen }: any) => {
           )}
         </div>
 
-        <div className="relative flex  h-fit flex-grow flex-col justify-between px-2 pt-2">
+        <div className="relative flex  h-fit flex-grow flex-col justify-between px-6 pt-2">
           <div
             title={name.length > 50 ? name : ""}
             className="text-text line-clamp-2 text-base font-bold"
