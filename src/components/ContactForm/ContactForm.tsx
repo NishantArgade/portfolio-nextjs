@@ -45,7 +45,7 @@ const ContactForm = () => {
   return (
     <>
       <Toaster position="top-right" reverseOrder={false} />
-      <div className="z-10 mx-3 block h-auto rounded-lg border-[1px] border-solid border-[rgba(222,222,222,0.203)] border-opacity-10 bg-[#ffffff1c] p-6 backdrop-blur-[6px]  md:w-1/2">
+      <div className="z-10 mx-3 block h-auto rounded-lg border-[1px] border-solid border-[rgba(222,222,222,0.203)] border-opacity-10 bg-[rgba(101,101,101,0.35)] p-6 backdrop-blur-[6px]  md:w-1/2">
         <div className="text-text1 mb-2 px-3 py-4 text-2xl font-extrabold leading-5 tracking-wider lg:text-lg">
           Email Me 🚀
         </div>

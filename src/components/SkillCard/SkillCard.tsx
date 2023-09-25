@@ -4,7 +4,7 @@ import "./SkillCard.css";
 
 const SkillCard = ({ skill }: { skill: ISkillCard }) => {
   return (
-    <div className="glassCard z-10 mx-3 mt-0 min-h-full max-w-sm rounded-lg p-4  md:w-[14rem] md:px-8 md:py-4 md:transition-all md:duration-500 md:hover:scale-105 ">
+    <div className="glassCard z-10  mx-3 mt-0 min-h-full max-w-sm rounded-lg border-[1px] border-b-[6px] border-solid border-[rgba(222,222,222,0.203)] border-b-[#d2d2d226]  p-4  md:w-[14rem] md:px-8 md:py-4 md:transition-all md:duration-500 md:hover:scale-105 ">
       <h5 className="dark:text-text mb-6   rounded-lg bg-black/10  p-2 text-center  text-2xl font-bold  tracking-wider text-gray-900">
         {skill.name}
       </h5>

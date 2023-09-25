@@ -28,8 +28,8 @@ const ExperienceCard = ({ experience }: IExperienceCardProps) => {
   return (
     <>
       <li
-        className="transition-max-h z-10 mb-10 ml-3 line-clamp-2 max-h-44 w-fit rounded-lg border-[1px] border-b-4 border-solid  border-[rgba(222,222,222,0.203)] border-b-[#d2d2d226]  bg-[#ffffff1c] px-3 py-4 backdrop-blur-[6px] duration-500 ease-linear
-        hover:line-clamp-none hover:max-h-full md:ml-4 md:px-8 md:py-8"
+        className="z-10 mb-10 ml-3 line-clamp-3 max-h-40 w-fit rounded-lg border-[1px] border-b-[6px]  border-solid border-[rgba(222,222,222,0.203)] border-b-[#d2d2d226] bg-[rgba(101,101,101,0.35)] px-3  py-4 shadow-md backdrop-blur-[6px] transition-all duration-500 ease-in
+        hover:line-clamp-none hover:max-h-full md:ml-4 md:px-8 md:py-5"
       >
         <div className="absolute -left-5 mt-1.5 h-3 w-3 rounded-full border bg-gradient-to-r  from-gray-500 to-blue-300 md:-left-6"></div>
         <div className="flex gap-x-4">
@@ -38,10 +38,10 @@ const ExperienceCard = ({ experience }: IExperienceCardProps) => {
           </div>
           <div>
             <h3 className="text-text pb-1 text-lg font-semibold ">{role}</h3>
-            <time className=" text-text mt-2 text-sm font-normal leading-none">
+            <p className=" text-text pb-2  text-sm font-normal leading-none">
               {companyName}
-            </time>
-            <p className="text-xsm mt-1 font-normal leading-none text-gray-400">
+            </p>
+            <p className="text-xsm  font-normal leading-none text-gray-400">
               {getFormatedDate(fromDate)} {getFormatedDate(toDate) && " - "}
               {getFormatedDate(toDate)}
             </p>
@@ -51,7 +51,7 @@ const ExperienceCard = ({ experience }: IExperienceCardProps) => {
         <p className="mb-4 mt-5  text-sm font-normal leading-6  text-gray-400">
           {description}
         </p>
-        <div className="flex gap-x-3 ">
+        <div className="flex gap-x-3 py-2 ">
           <p className="text-text  text-sm font-bold tracking-wider">Skills:</p>
           <div className="flex flex-wrap  gap-3">
             {skills.map((skill, i) => {

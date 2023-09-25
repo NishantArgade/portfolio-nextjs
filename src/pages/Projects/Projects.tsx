@@ -101,16 +101,18 @@ const Projects = ({ heading }: { heading: string }) => {
               );
             })}
           </div>
-          <div className="text-text1 mt-5 flex justify-center">
-            <Pagination
-              size="large"
-              count={totalPages}
-              color="secondary"
-              page={currPage}
-              onChange={handlePageChange}
-              className="text-text mt-4  rounded-lg bg-[#ffffff1c] px-4 py-0.5"
-            />
-          </div>
+          {totalPages > 6 && (
+            <div className="text-text1 mt-5 flex justify-center">
+              <Pagination
+                size="large"
+                count={totalPages}
+                color="secondary"
+                page={currPage}
+                onChange={handlePageChange}
+                className="text-text mt-4  rounded-lg bg-[#ffffff1c] px-4 py-0.5"
+              />
+            </div>
+          )}
         </div>
         <SkewedLight />
       </div>

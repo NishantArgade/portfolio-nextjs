@@ -32,23 +32,25 @@ const ProjectCard = ({ project, handleOpen }: any) => {
             images,
           })
         }
-        className="max-h-1/4 z-10 flex w-[18rem] cursor-pointer  flex-col overflow-hidden rounded-lg border-[1px]  border-solid  border-[rgba(222,222,222,0.203)] bg-[#6c8d9552] shadow-lg  backdrop-blur-[6px] transition-transform duration-500 hover:bg-slate-700 md:m-5 md:hover:scale-105"
+        className="max-h-1/4 z-10 flex w-[23rem] cursor-pointer  flex-col overflow-hidden rounded-lg border-[1px]  border-solid  border-[rgba(222,222,222,0.2)] bg-[rgba(101,101,101,0.35)] shadow-lg  backdrop-blur-[6px] transition-transform duration-500 hover:bg-slate-700 md:m-5 md:hover:scale-105"
       >
-        {isHovered ? (
-          <Carousel
-            slides={images}
-            showIndicators={false}
-            showThumbs={false}
-            effect="fade"
-            autoSlide={true}
-            autoSlideInterval={1500}
-            showControlArrow={false}
-          />
-        ) : (
-          <div>
-            <Carousel slides={[images[0]]} />
-          </div>
-        )}
+        <div className="flex justify-center rounded-lg py-2">
+          {isHovered ? (
+            <Carousel
+              slides={images}
+              showIndicators={false}
+              showThumbs={false}
+              effect="fade"
+              autoSlide={true}
+              autoSlideInterval={1500}
+              showControlArrow={false}
+            />
+          ) : (
+            <div>
+              <Carousel slides={[images[0]]} />
+            </div>
+          )}
+        </div>
 
         <div className="relative flex  h-fit flex-grow flex-col justify-between px-2 pt-2">
           <div

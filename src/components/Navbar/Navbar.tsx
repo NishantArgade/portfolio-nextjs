@@ -132,12 +132,12 @@ const Navbar = () => {
         <div className="flex md:hidden" onClick={handleIconToggle}>
           {menuIcon ? (
             <FontAwesomeIcon
-              className="text-2xl text-[#ba46e1] transition-all duration-300 hover:scale-105"
+              className="text-[1.5rem] text-[#ba46e1] transition-all duration-300 hover:scale-105"
               icon={faXmark}
             />
           ) : (
             <FontAwesomeIcon
-              className="text-2xl text-[#ba46e1] transition-all duration-300 hover:scale-105"
+              className="text-[1.5rem] text-[#ba46e1] transition-all duration-300 hover:scale-105"
               icon={faBars}
             />
           )}

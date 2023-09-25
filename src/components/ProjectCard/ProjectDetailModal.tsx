@@ -41,7 +41,7 @@ const ProjectDetailModal = ({
 
             <div className="flex h-[40%] w-full items-center justify-center bg-[#053B50] py-2 md:h-full md:w-[40%] md:py-0">
               {modalData?.images?.length > 1 ? (
-                <div className="px-6">
+                <div className="px-6 text-black">
                   <Carousel
                     slides={modalData?.images}
                     autoSlide
