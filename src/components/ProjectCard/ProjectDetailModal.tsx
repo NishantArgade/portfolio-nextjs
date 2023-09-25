@@ -153,7 +153,7 @@ const ProjectDetailModal = ({
                   <strong>Technology Stack :</strong>
                 </p>
 
-                <ul className="grid list-inside list-disc grid-cols-2 gap-x-4 gap-y-4 md:grid-cols-3 md:items-center md:justify-center">
+                <ul className="grid list-inside list-disc grid-cols-2 gap-x-4 gap-y-4 md:grid-cols-3 md:items-center md:justify-center lg:grid-cols-5">
                   {modalData?.project?.attributes?.skill_sets?.data.map(
                     (tech, index) => {
                       let logoURL = "/";
