@@ -29,7 +29,7 @@ const Experience = ({ heading }: { heading: string }) => {
       };
     });
 
-    const roleData = role?.data.attributes.name;
+    const roleData = role?.data?.attributes?.name;
 
     return {
       role: roleData,

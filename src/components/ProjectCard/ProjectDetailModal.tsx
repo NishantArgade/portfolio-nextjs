@@ -157,8 +157,8 @@ const ProjectDetailModal = ({
                   {modalData?.project?.attributes?.skill_sets?.data.map(
                     (tech, index) => {
                       let logoURL = "/";
-                      if (tech.attributes.logo.data) {
-                        logoURL = tech?.attributes.logo.data?.attributes?.url;
+                      if (tech?.attributes?.logo.data) {
+                        logoURL = tech?.attributes?.logo?.data?.attributes?.url;
                       }
                       return (
                         <div

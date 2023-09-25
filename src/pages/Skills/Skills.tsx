@@ -10,10 +10,10 @@ const Skills = ({ heading }: { heading: string }) => {
   const skills = skillsData.map((item) => {
     return {
       name: item?.attributes?.skillName,
-      skillSet: item?.attributes?.skill_sets.data.map((skill: any) => {
+      skillSet: item?.attributes?.skill_sets?.data.map((skill: any) => {
         return {
-          name: skill.attributes.name,
-          logo: skill.attributes.logo.data?.attributes?.url,
+          name: skill?.attributes?.name,
+          logo: skill?.attributes?.logo.data?.attributes?.url,
         };
       }),
     };
