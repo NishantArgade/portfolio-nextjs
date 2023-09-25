@@ -21,7 +21,6 @@ const Contact = ({ heading }: { heading: string }) => {
               transform="translate(100 100)"
             />
           </svg>
-          ={" "}
           <svg
             viewBox="0 0 200 200"
             className="absolute right-[12rem] top-[2rem] z-0 w-[14rem]"
@@ -35,7 +34,7 @@ const Contact = ({ heading }: { heading: string }) => {
           </svg>
           <div className="text-center">
             <h2 className="text-text1 mb-2 py-4 font-extrabold leading-5 tracking-wider   md:text-3xl lg:text-6xl">
-              Contanct
+              Contact
             </h2>
             <div className="text-text2 lg:text-1xl px-2 text-sm tracking-wide dark:text-gray-400  md:text-sm">
               {heading}
