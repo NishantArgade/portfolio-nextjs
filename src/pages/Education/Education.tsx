@@ -22,7 +22,7 @@ const Education = ({ heading }: { heading: string }) => {
     return {
       instituteName: instituteName,
       qulification: qualificationDegree,
-      instituteLogo: instituteLogo?.data?.attributes.url,
+      instituteLogo: instituteLogo?.data?.attributes?.url,
       startDate: startDate,
       endDate: endDate,
       grad: percentageGrade,

@@ -158,7 +158,7 @@ const ProjectDetailModal = ({
                     (tech, index) => {
                       let logoURL = "/";
                       if (tech.attributes.logo.data) {
-                        logoURL = tech.attributes.logo.data?.attributes.url;
+                        logoURL = tech?.attributes.logo.data?.attributes?.url;
                       }
                       return (
                         <div

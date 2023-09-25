@@ -13,7 +13,7 @@ const Skills = ({ heading }: { heading: string }) => {
       skillSet: item?.attributes?.skill_sets.data.map((skill: any) => {
         return {
           name: skill.attributes.name,
-          logo: skill.attributes.logo.data?.attributes.url,
+          logo: skill.attributes.logo.data?.attributes?.url,
         };
       }),
     };

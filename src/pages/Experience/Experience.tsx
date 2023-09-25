@@ -24,7 +24,7 @@ const Experience = ({ heading }: { heading: string }) => {
     const docIconUrl = docIcon?.data?.attributes?.url;
     const skillSetData = skillset?.data.map((skill: any) => {
       return {
-        name: skill?.attributes.name,
+        name: skill?.attributes?.name,
         logo: skill?.attributes?.logo?.data?.attributes?.url,
       };
     });

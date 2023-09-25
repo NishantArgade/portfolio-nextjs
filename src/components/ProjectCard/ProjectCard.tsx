@@ -10,7 +10,7 @@ const ProjectCard = ({ project, handleOpen }: any) => {
     attributes: { name, description, image, startDate, endDate },
   } = project;
 
-  const images = image?.data.map((img: any) => `${img.attributes.url}`);
+  const images = image?.data.map((img: any) => `${img?.attributes?.url}`);
 
   const handleMouseEnter = () => {
     if (!isHovered) setIsHovered(true);

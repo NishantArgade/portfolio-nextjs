@@ -15,7 +15,7 @@ const HeroSection = () => {
   const { fullName, bioHeading, resumePDF, myPhoto, my_roles } = bio as IBio;
 
   if (my_roles) roles = my_roles?.data.map((role) => role?.attributes.name);
-  if (myPhoto) myPhotoImg = `${myPhoto?.data.attributes.url}`;
+  if (myPhoto) myPhotoImg = `${myPhoto?.data?.attributes?.url}`;
 
   return (
     <>
@@ -74,7 +74,7 @@ const HeroSection = () => {
               </div>
               <div className="pb-2 pt-6 text-center md:text-left">
                 <a
-                  href={`${resumePDF?.data.attributes.url}`}
+                  href={`${resumePDF?.data?.attributes?.url}`}
                   download="Nishant-Argade-Resume"
                   target="_blank"
                   rel="noreferrer"
