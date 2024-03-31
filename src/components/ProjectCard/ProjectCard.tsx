@@ -32,9 +32,9 @@ const ProjectCard = ({ project, handleOpen }: any) => {
             images,
           })
         }
-        className="max-h-1/4 z-10 flex w-[23rem] cursor-pointer  flex-col overflow-hidden rounded-lg border-[1px]  border-solid  border-[rgba(222,222,222,0.2)] bg-[rgba(101,101,101,0.35)] shadow-lg  backdrop-blur-[6px] transition-transform duration-500 hover:bg-slate-700 md:m-5 md:hover:scale-105"
+        className="max-h-1/4 z-10 flex w-[18rem] cursor-pointer  flex-col overflow-hidden rounded-lg border-[1px]  border-solid  border-[rgba(222,222,222,0.2)] bg-[rgba(101,101,101,0.35)] shadow-lg  backdrop-blur-[6px] transition-transform duration-500 hover:bg-slate-700 md:m-5 md:hover:scale-105"
       >
-        <div className="flex justify-center rounded-lg py-2">
+        <div className="flex justify-center rounded-lg p-1 md:p-2  ">
           {isHovered ? (
             <Carousel
               slides={images}
@@ -52,7 +52,7 @@ const ProjectCard = ({ project, handleOpen }: any) => {
           )}
         </div>
 
-        <div className="relative flex  h-fit flex-grow flex-col justify-between px-6 pt-2">
+        <div className="relative flex  h-fit flex-grow flex-col justify-between px-2">
           <div
             title={name.length > 50 ? name : ""}
             className="text-text line-clamp-2 text-base font-bold"

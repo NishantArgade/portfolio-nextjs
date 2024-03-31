@@ -94,7 +94,7 @@ const Footer = () => {
                 </Link>
               )}
             </div>
-            <div className="py-10 text-gray-400">
+            <div className="text-xsm py-10 text-gray-400">
               © {getCurrentYear()} Nishant Argade. All rights reserved.
             </div>
           </div>

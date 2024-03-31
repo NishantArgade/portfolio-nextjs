@@ -90,7 +90,7 @@ const Projects = ({ heading }: { heading: string }) => {
               {heading}
             </div>
           </div>
-          <div className="mt-10 flex flex-wrap justify-center gap-x-4 gap-y-10 px-3 md:gap-y-4">
+          <div className="mt-10 grid grid-cols-1 place-items-center gap-y-10 px-20 md:grid-cols-3">
             {projects.map((project, index) => {
               return (
                 <ProjectCard
@@ -101,15 +101,15 @@ const Projects = ({ heading }: { heading: string }) => {
               );
             })}
           </div>
-          {totalPages > 6 && (
-            <div className="text-text1 mt-5 flex justify-center">
+          {totalPages > 1 && (
+            <div className="text-text1 mt-8 flex justify-center">
               <Pagination
                 size="large"
                 count={totalPages}
                 color="secondary"
                 page={currPage}
                 onChange={handlePageChange}
-                className="text-text mt-4  rounded-lg bg-[#ffffff1c] px-4 py-0.5"
+                className="mt-4 rounded-lg  bg-[#3c4c5a] px-4 py-0.5 text-white shadow-md"
               />
             </div>
           )}

@@ -28,8 +28,8 @@ const ExperienceCard = ({ experience }: IExperienceCardProps) => {
   return (
     <>
       <li
-        className="z-10 mb-10 ml-3 line-clamp-3 max-h-40 w-fit rounded-lg border-[1px] border-b-[6px]  border-solid border-[rgba(222,222,222,0.203)] border-b-[#d2d2d226] bg-[rgba(101,101,101,0.35)] px-3  py-4 shadow-md backdrop-blur-[6px] transition-all duration-500 ease-in
-        hover:line-clamp-none hover:max-h-full md:ml-4 md:px-8 md:py-5"
+        className="z-10 mb-10 ml-3 h-fit w-full rounded-lg border-[1px]  border-b-[6px] border-solid border-[rgba(222,222,222,0.203)] border-b-[#d2d2d226] bg-[rgba(101,101,101,0.35)]  px-3 py-4 shadow-md backdrop-blur-[6px] transition-all duration-500
+        ease-in  md:ml-4 md:p-6"
       >
         <div className="absolute -left-5 mt-1.5 h-3 w-3 rounded-full border bg-gradient-to-r  from-gray-500 to-blue-300 md:-left-6"></div>
         <div className="flex gap-x-4">
@@ -48,7 +48,7 @@ const ExperienceCard = ({ experience }: IExperienceCardProps) => {
           </div>
         </div>
 
-        <p className="mb-4 mt-5  text-sm font-normal leading-6  text-gray-400">
+        <p className="text-xsm mb-4 mt-5  font-normal leading-6 text-gray-400  md:text-sm">
           {description}
         </p>
         <div className="flex gap-x-3 py-2 ">
@@ -59,14 +59,16 @@ const ExperienceCard = ({ experience }: IExperienceCardProps) => {
               if (skill.logo) skillLogoUrl = skill.logo;
               return (
                 <p key={i}>
-                  <button className="text-xsm border-text inline-flex items-center rounded border border-solid  border-opacity-30 bg-[#6c8d9552] px-2 py-1 text-gray-300 hover:bg-gray-700">
-                    <Image
-                      src={skillLogoUrl}
-                      width={20}
-                      height={20}
-                      alt={""}
-                      className="mr-2"
-                    />
+                  <button className="text-xsm border-text inline-flex items-center gap-2 rounded border border-solid  border-opacity-30 bg-[#6c8d9552]  p-1 text-gray-300 hover:bg-gray-700">
+                    <span className="relative h-4 w-4">
+                      <Image
+                        src={skillLogoUrl}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={""}
+                        className="mr-2"
+                      />
+                    </span>
                     <span>{skill.name}</span>
                   </button>
                 </p>

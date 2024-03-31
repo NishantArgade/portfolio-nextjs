@@ -47,7 +47,7 @@ const ProjectDetailModal = ({
                     autoSlide
                     effect="slide"
                     carouselWidth="34rem"
-                    autoSlideInterval={1800}
+                    autoSlideInterval={3000}
                     thumbWidth={"6rem"}
                   />
                 </div>
@@ -66,12 +66,12 @@ const ProjectDetailModal = ({
             {/* porject details */}
             <div
               id="modalSidebar"
-              className="text-text mx-auto flex h-[60%] flex-col items-center justify-start overflow-y-auto p-3 pl-4 pt-4 md:h-full md:w-[60%] md:items-start"
+              className="text-text mx-auto flex h-[60%] flex-col items-center justify-start overflow-y-auto p-2 pl-4  md:h-full md:w-[60%] md:items-start"
             >
-              <h2 className="mb-4  text-2xl font-semibold  md:mt-5">
+              <h2 className="mb-4  text-2xl font-semibold">
                 {modalData?.project?.attributes?.name}
               </h2>
-              <p className="mb-4 text-center text-gray-400 md:text-start">
+              <p className="mb-4 text-center text-sm text-gray-400 md:text-start">
                 {modalData?.project?.attributes?.description}
               </p>
               <div className="mb-4">
@@ -91,7 +91,7 @@ const ProjectDetailModal = ({
                   <p>
                     <span className="text-text tex-sm font-bold">
                       End Date :
-                    </span>
+                    </span>{" "}
                     <span className="text-sm text-gray-400">
                       {getFormatedDate(modalData?.project?.attributes?.endDate)}
                     </span>
@@ -112,13 +112,13 @@ const ProjectDetailModal = ({
                     </span>
                     <a
                       href={modalData?.project?.attributes?.projectLink}
-                      className="truncate pr-2 text-blue-500 hover:underline sm:truncate"
+                      className="truncate pr-2 text-sm text-blue-500 hover:underline sm:truncate"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       {modalData?.project?.attributes?.projectLink.length <= 17
                         ? modalData?.project?.attributes?.projectLink
-                        : "live project link"}
+                        : "Live link"}
                     </a>
                   </div>
                 )}
@@ -138,17 +138,17 @@ const ProjectDetailModal = ({
                       href={modalData?.project?.attributes?.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="truncate pr-2 text-blue-500 hover:underline sm:truncate"
+                      className="truncate pr-2 text-sm text-blue-500 hover:underline sm:truncate"
                     >
                       {modalData?.project?.attributes?.githubLink.length <= 17
                         ? modalData?.project?.attributes?.githubLink
-                        : "github link"}
+                        : "Github link"}
                     </a>
                   </div>
                 )}
               </div>
 
-              <div className="mb-4 mt-5 md:mt-0">
+              <div className="mb-4 mt-3 md:mt-0">
                 <p className="pb-4 text-center md:text-start">
                   <strong>Technology Stack :</strong>
                 </p>
@@ -163,18 +163,20 @@ const ProjectDetailModal = ({
                       return (
                         <div
                           key={index}
-                          className="text-xsm border-text inline-flex items-center rounded border border-solid  border-opacity-30 bg-[#6c8d9552] px-2 py-1 text-gray-300 hover:bg-gray-700"
+                          className="border-text inline-flex items-center gap-2 rounded border border-solid border-opacity-30  bg-[#6c8d9552]  p-1  text-gray-300 hover:bg-gray-700"
                         >
-                          <span>
+                          <span className="relative h-4 w-4">
                             <Image
                               src={logoURL}
-                              width={28}
-                              height={28}
                               alt="rocket"
+                              layout="fill"
+                              objectFit="contain"
                               className="mr-2"
                             />
                           </span>
-                          <span>{tech.attributes.name}</span>
+                          <span className="text-xsm">
+                            {tech.attributes.name}
+                          </span>
                         </div>
                       );
                     }

@@ -27,8 +27,8 @@ const EducationCard = ({ education }: IEducationCardProps) => {
 
   return (
     <>
-      <li className="transition-max-h z-10  mb-10 mr-2 line-clamp-3 max-h-48 w-full overflow-hidden rounded-lg border-[1px] border-b-4 border-solid border-[rgba(222,222,222,0.203)] border-b-[#d2d2d226] bg-[rgba(101,101,101,0.35)] px-3 py-4 backdrop-blur-[6px] duration-500  ease-in hover:line-clamp-none hover:max-h-full md:px-8 md:py-8">
-        <div className="absolute -right-6 mt-1.5 h-3 w-3 rounded-full border border-white bg-gradient-to-r   from-gray-500 to-blue-300 "></div>
+      <li className="transition-max-h relative  z-10 mb-10 mr-2    h-fit w-full  rounded-lg border-[1px] border-b-4 border-solid border-[rgba(222,222,222,0.203)] border-b-[#d2d2d226] bg-[rgba(101,101,101,0.35)] p-6  backdrop-blur-[6px] duration-500 ease-in ">
+        <div className="absolute -right-6 top-6 mt-0 h-3 w-3 rounded-full border bg-gradient-to-r from-gray-500  to-blue-300 md:-right-6"></div>{" "}
         <div className="flex gap-x-4">
           <div className="pt-1">
             <Image src={instituteLogoURL} width={80} height={80} alt="logo" />
@@ -56,7 +56,7 @@ const EducationCard = ({ education }: IEducationCardProps) => {
             </span>
           </div>
         )}
-        <p className="text-text2 mb-4  mt-1 text-sm font-normal  leading-6  dark:text-gray-400">
+        <p className="text-text2 text-xsm  mb-4 mt-1 font-normal leading-6  dark:text-gray-400  md:text-sm">
           {description}
         </p>
         {result && (
