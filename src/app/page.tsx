@@ -11,7 +11,12 @@ import HeroSection from "@/pages/HeroSection";
 import Projects from "@/pages/Projects/Projects";
 import Skills from "@/pages/Skills";
 import { IBio } from "@/types";
-import MouseParticles from "react-mouse-particles";
+// import MouseParticles from "react-mouse-particles";
+import dynamic from 'next/dynamic';
+
+const MouseParticles = dynamic(() => import('react-mouse-particles'), {
+    ssr: false
+});
 
 const Home = () => {
   const { bio, setBioData } = useGlobalContext();
