@@ -74,7 +74,7 @@ const Education = ({ heading }: { heading: string }) => {
           <div className="mt-14 flex justify-center">
             <ol className=" relative w-[92%]  border-r-2 border-r-gray-500  pr-4  md:w-[80%]">
               {educations.map((edu, ind) => (
-                <EducationCard education={edu} key={ind} />
+                <EducationCard education={edu} key={ind} index={ind} />
               ))}
             </ol>
           </div>

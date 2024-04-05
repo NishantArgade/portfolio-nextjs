@@ -1,5 +1,6 @@
 export interface IExperienceCardProps {
   experience: IExperience;
+  index:number
 }
 export interface IEducationCardProps {
   education: {
@@ -13,6 +14,7 @@ export interface IEducationCardProps {
     result: string;
     resultIcon: string;
   };
+  index:number
 }
 export interface ISkillCardProps {
   skill: ISkill;

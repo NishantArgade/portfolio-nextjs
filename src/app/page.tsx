@@ -11,6 +11,7 @@ import HeroSection from "@/pages/HeroSection";
 import Projects from "@/pages/Projects/Projects";
 import Skills from "@/pages/Skills";
 import { IBio } from "@/types";
+import MouseParticles from "react-mouse-particles";
 
 const Home = () => {
   const { bio, setBioData } = useGlobalContext();
@@ -35,6 +36,14 @@ const Home = () => {
       <Education heading={educationPageHeading} />
       <Contact heading={contactPageHeading} />
       <Footer />
+      {/* <MouseParticles g={1} color="random" cull="col,image-wrapper" /> */}
+      <MouseParticles
+        g={1}
+        color={["#18A59F", "#ccdfs2"]}
+        cull="col,image-wrapper"
+        radius={10}
+        life={1}
+      />
     </div>
   ) : (
     <Loader />

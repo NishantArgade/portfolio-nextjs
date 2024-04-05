@@ -3,8 +3,9 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import Carousel from "reactjs-nextjs-carousel";
+import  {motion } from "framer-motion"
 
-const ProjectCard = ({ project, handleOpen }: any) => {
+const ProjectCard = ({ project, handleOpen,index }: any) => {
   const [isHovered, setIsHovered] = useState(false);
   const {
     attributes: { name, description, image, startDate, endDate },
@@ -22,7 +23,23 @@ const ProjectCard = ({ project, handleOpen }: any) => {
 
   useEffect(() => {}, []);
   return (
-    <>
+    <motion.div
+    
+    initial={{
+      opacity:0,
+    
+    }}
+    whileInView={{
+      opacity: 1,
+   
+      transition: {
+        duration: 1.5,
+       delay:((index+1)-1)*0.2,
+       
+      }
+    }}
+    viewport={{ once: false }}
+    >
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -88,7 +105,7 @@ const ProjectCard = ({ project, handleOpen }: any) => {
           </button>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

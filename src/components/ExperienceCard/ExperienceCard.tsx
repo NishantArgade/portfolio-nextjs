@@ -2,8 +2,9 @@ import { getFormatedDate } from "@/helper";
 import { IExperienceCardProps } from "@/types";
 import Image from "next/image";
 import React from "react";
+import {motion} from "framer-motion"
 
-const ExperienceCard = ({ experience }: IExperienceCardProps) => {
+const ExperienceCard = ({ experience,index }: IExperienceCardProps) => {
   let {
     role,
     companyName,
@@ -26,7 +27,21 @@ const ExperienceCard = ({ experience }: IExperienceCardProps) => {
   if (docIcon) docIconUrl = docIcon;
 
   return (
-    <>
+    <motion.div 
+    initial={{
+      opacity:0,
+      x: 100
+    }}
+    whileInView={{
+      opacity: 1,
+      x: 0, 
+      transition: {
+        duration: 1,
+       delay:((index+1)-1)*0.4
+      }
+    }}
+    viewport={{ once: false }}
+    >
       <li
         className="z-10 mb-10 ml-3 h-fit w-full rounded-lg border-[1px]  border-b-[6px] border-solid border-[rgba(222,222,222,0.203)] border-b-[#d2d2d226] bg-[rgba(101,101,101,0.35)]  px-3 py-4 shadow-md backdrop-blur-[6px] transition-all duration-500
         ease-in  md:ml-4 md:p-6"
@@ -93,7 +108,7 @@ const ExperienceCard = ({ experience }: IExperienceCardProps) => {
           </div>
         )}
       </li>
-    </>
+    </motion.div>
   );
 };
 

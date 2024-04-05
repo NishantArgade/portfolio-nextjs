@@ -3,6 +3,9 @@ import SkillCard from "@/components/SkillCard";
 import useFetchSkillData from "@/hooks/useFetchSkillData";
 import { ISkillCard } from "@/types";
 import React from "react";
+import {motion} from "framer-motion"
+
+import {fadeIn} from "../../../variants.js"
 
 const Skills = ({ heading }: { heading: string }) => {
   const skillsData = useFetchSkillData();
@@ -25,7 +28,8 @@ const Skills = ({ heading }: { heading: string }) => {
         id="skills"
         className="bg-background1    min-h-[30rem]  overflow-x-hidden pt-[80px]"
       >
-        <div className="container relative mx-auto h-auto w-screen pb-8">
+        <div
+        className="container relative mx-auto h-auto w-screen pb-8">
           <svg
             id="10015.io"
             viewBox="0 0 480 480"
@@ -60,7 +64,7 @@ const Skills = ({ heading }: { heading: string }) => {
           </div>
           <div className="mt-14 flex flex-col flex-wrap gap-y-10 md:flex-row md:justify-center">
             {skills.map((skill, ind) => {
-              return <SkillCard skill={skill} key={ind + "skillcard"} />;
+              return <SkillCard skill={skill} key={ind + "skillcard"} index={ind}/>;
             })}
           </div>
         </div>

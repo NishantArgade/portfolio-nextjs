@@ -2,8 +2,9 @@ import { getFormatedDate } from "@/helper";
 import { IEducationCardProps } from "@/types";
 import Image from "next/image";
 import React from "react";
+import {motion} from "framer-motion"
 
-const EducationCard = ({ education }: IEducationCardProps) => {
+const EducationCard = ({ education ,index}: IEducationCardProps) => {
   let {
     instituteName,
     instituteLogo,
@@ -26,7 +27,21 @@ const EducationCard = ({ education }: IEducationCardProps) => {
   if (resultIcon) resultIconUrl = resultIcon;
 
   return (
-    <>
+    <motion.div 
+    initial={{
+      opacity:0,
+      x: -100
+    }}
+    whileInView={{
+      opacity: 1,
+      x: 0, 
+      transition: {
+        duration: 1,
+       delay:((index+1)-1)*0.4
+      }
+    }}
+    viewport={{ once: false }}
+    >
       <li className="transition-max-h relative  z-10 mb-10 mr-2    h-fit w-full  rounded-lg border-[1px] border-b-4 border-solid border-[rgba(222,222,222,0.203)] border-b-[#d2d2d226] bg-[rgba(101,101,101,0.35)] p-6  backdrop-blur-[6px] duration-500 ease-in ">
         <div className="absolute -right-6 top-6 mt-0 h-3 w-3 rounded-full border bg-gradient-to-r from-gray-500  to-blue-300 md:-right-6"></div>{" "}
         <div className="flex gap-x-4">
@@ -70,7 +85,7 @@ const EducationCard = ({ education }: IEducationCardProps) => {
           </div>
         )}
       </li>
-    </>
+    </motion.div>
   );
 };
 

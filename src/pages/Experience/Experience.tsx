@@ -94,7 +94,7 @@ const Experience = ({ heading }: { heading: string }) => {
           <div className="mx-auto mt-14 flex justify-center">
             <ol className="relative w-[92%]  border-l-2 border-l-gray-500  pr-3 md:w-[80%]">
               {experiences.map((exp, ind) => (
-                <ExperienceCard experience={exp} key={ind} />
+                <ExperienceCard experience={exp} key={ind} index={ind} />
               ))}
             </ol>
           </div>

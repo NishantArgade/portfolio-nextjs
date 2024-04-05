@@ -97,6 +97,7 @@ const Projects = ({ heading }: { heading: string }) => {
                   key={index}
                   handleOpen={handleOpen}
                   project={project}
+                  index={index}
                 />
               );
             })}
