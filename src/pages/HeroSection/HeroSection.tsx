@@ -51,21 +51,22 @@ const HeroSection = () => {
         >
           <div className="hero-left-section  z-20 order-2 mx-3 flex w-full flex-col items-end  justify-end pt-16 md:order-1 md:mt-16">
             <motion.div 
-initial={{
-  opacity:0,
-  x: -100
-}}
-whileInView={{
-  opacity: 1,
-  x: 0, 
-  transition: {
-    duration: 1,
-   delay:0
-  }
-}}
-viewport={{ once: false }}
-            
-            className="h-auto">
+              initial={{
+                opacity:0,
+                x: -100
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0, 
+                transition: {
+                  duration: 1,
+                delay:0
+                }
+              }}
+              viewport={{ once: false }}
+              
+              className="h-auto"
+            >
               <div className="text-text1 mb-2   pb-4 text-center text-4xl font-extrabold leading-tight tracking-tight dark:text-white md:text-left md:text-5xl lg:text-6xl">
                 Hi, I am <br />{" "}
                 <span className="animate-gradient mt-10 bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 bg-clip-text font-bold leading-tight text-transparent md:pr-2">
@@ -123,21 +124,22 @@ viewport={{ once: false }}
           </div>
 
           <motion.div
-          initial={{
-            opacity:0,
-            x: 100
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0, 
-            transition: {
-              duration: 1,
-             delay:0
-            }
-          }}
-          viewport={{ once: false }}
-          
-          className="hero-right-section  z-20 order-1 h-full w-full md:order-2">
+            initial={{
+              opacity:0,
+              x: 100
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0, 
+              transition: {
+                duration: 1,
+              delay:0
+              }
+            }}
+            viewport={{ once: false }}
+            
+            className="hero-right-section  z-20 order-1 h-full w-full md:order-2"
+          >
             <HeroBgAnimation />
             <Image
               className="absolute  top-[5rem]  pl-6 transition-all duration-500 hover:scale-105 md:right-0  md:top-24 md:pl-0"

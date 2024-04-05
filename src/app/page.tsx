@@ -32,7 +32,7 @@ const Home = () => {
   } = bio as IBio;
 
   return Object.keys(data).length > 0 ? (
-    <div>
+    <div className="section-container">
       <Navbar />
       <HeroSection />
       <Skills heading={skillPageHeading} />

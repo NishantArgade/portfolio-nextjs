@@ -47,21 +47,21 @@ const ContactForm = () => {
     <>
       <Toaster position="top-right" reverseOrder={false} />
       <motion.div 
-      initial={{
-        opacity:0,
-        y: 100
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0, 
-        transition: {
-          duration: 1,
-         delay:0
-        }
-      }}
-      viewport={{ once: false }}
-      
-      className="z-10 mx-3 block h-auto rounded-lg border-[1px] border-solid border-[rgba(222,222,222,0.203)] border-opacity-10 bg-[rgba(101,101,101,0.35)] p-2 backdrop-blur-[6px] md:w-[60%]  md:p-6">
+        initial={{
+          opacity:0,
+          y: 100
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0, 
+          transition: {
+            duration: 1,
+          delay:0
+          }
+        }}
+        viewport={{ once: false }}
+        
+        className="z-10 mx-3 block h-auto rounded-lg border-[1px] border-solid border-[rgba(222,222,222,0.203)] border-opacity-10 bg-[rgba(101,101,101,0.35)] p-2 backdrop-blur-[6px] md:w-[60%]  md:p-6">
         <div className="text-text1 mb-2 px-3 py-4 text-2xl font-extrabold leading-5 tracking-wider lg:text-lg">
           Email Me 🚀
         </div>

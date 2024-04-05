@@ -24,21 +24,19 @@ const ProjectCard = ({ project, handleOpen,index }: any) => {
   useEffect(() => {}, []);
   return (
     <motion.div
+      initial={{
+        opacity:0,
+      }}
+      whileInView={{
+        opacity: 1,
     
-    initial={{
-      opacity:0,
-    
-    }}
-    whileInView={{
-      opacity: 1,
-   
-      transition: {
-        duration: 1.5,
-       delay:((index+1)-1)*0.2,
-       
-      }
-    }}
-    viewport={{ once: false }}
+        transition: {
+          duration: 1.5,
+        delay:((index+1)-1)*0.2,
+        
+        }
+      }}
+      viewport={{ once: false }}
     >
       <div
         onMouseEnter={handleMouseEnter}
